@@ -25,53 +25,58 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         Listing::create([
-            'name' => 'Jose', 
+            'name' => 'Jose',
+            'job' => 'Agricultor', 
             'birthplace' => 'Juda',
             'birthday' => '2007-12-31',
             'deathplace' => 'Jerusalen',
             'deathdate' => '2007-12-31',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
-            'tags' => 'tag1, tag2, tag3'
+            'tags' => 'profeta, creyente, sumosacerdote'
         ]);
 
         Listing::create([
-            'name' => 'Maria', 
+            'name' => 'Maria',
+            'job' => 'Predicador', 
             'birthplace' => 'Santiago',
             'birthday' => '2007-12-31',
             'deathplace' => 'Grecia',
             'deathdate' => '2007-12-31',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
-            'tags' => 'tag1, tag2, tag3'
+            'tags' => 'profeta, creyente, sumosacerdote'
         ]);
 
         Listing::create([
             'name' => 'Pepe', 
+            'job' => 'Albañil', 
             'birthplace' => 'San cristobal',
             'birthday' => '2007-12-31',
             'deathplace' => 'Grecia',
             'deathdate' => '2007-12-31',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
-            'tags' => 'tag1, tag2, tag3'
+            'tags' => 'creyente, sumosacerdote'
         ]);
 
         Listing::create([
-            'name' => 'Carlos', 
+            'name' => 'Carlos',
+            'job' => 'Pescador', 
             'birthplace' => 'Italia',
             'birthday' => '2007-12-31',
             'deathplace' => 'Grecia',
             'deathdate' => '2007-12-31',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
-            'tags' => 'tag1, tag2, tag3'
+            'tags' => 'profeta, creyente, sumosacerdote, mayordomo'
         ]);
         
         Listing::create([
-            'name' => 'Ruth', 
+            'name' => 'Ruth',
+            'job' => 'Sacerdote',
             'birthplace' => 'España',
             'birthday' => '2007-12-31',
             'deathplace' => 'Grecia',
             'deathdate' => '2007-12-31',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
-            'tags' => 'tag1, tag2, tag3'
+            'tags' => 'sumosacerdote'
         ]);
     }
 }
