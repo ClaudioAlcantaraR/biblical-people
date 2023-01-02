@@ -1,4 +1,4 @@
-<form action="/" class="flex items-center">
+<form action="/listings" class="flex items-center">
     <label for="simple-search" class="sr-only">Buscar</label>
     <div class="relative w-full">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
