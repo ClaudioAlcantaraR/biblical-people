@@ -8,22 +8,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/listings', [ListingController::class, 'index']);
+// Show all biographies. Definimos un name para usar la ruta
+Route::get('/listings', [ListingController::class, 'index'])->name('listings.index');
 
-Route::get('/listings/{listing}', [ListingController::class, 'show']);
+// Show create biography
+Route::get('/listings/create', [ListingController::class, 'create'])->name('listings.create');
 
+// Show dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Show Search Page
 Route::get('/search', function () {
     return view('search');
 })->middleware(['auth', 'verified'])->name('search');
 
+// Account
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// Show single biography
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 require __DIR__.'/auth.php';
