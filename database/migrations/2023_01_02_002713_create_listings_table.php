@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('job');
             $table->string('birthplace');
             $table->date('birthday');
             $table->string('deathplace');
