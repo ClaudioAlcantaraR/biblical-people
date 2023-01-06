@@ -37,7 +37,20 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formFields = $request->validate([
+            'name' => 'required',
+            'job' => 'required',
+            'birthplace' => 'nullable',
+            'birthday' => 'nullable',
+            'deathplace' => 'nullable',
+            'deathdate' => 'nullable',
+            'description' => 'required',
+            'tags' => 'nullable',
+        ]);
+
+        Listing::create($formFields);
+
+        return redirect('/listings');
     }
 
     /**
