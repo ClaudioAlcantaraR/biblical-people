@@ -14,6 +14,9 @@ Route::get('/listings', [ListingController::class, 'index'])->name('listings.ind
 // Show create biography
 Route::get('/listings/create', [ListingController::class, 'create'])->name('listings.create');
 
+// Store listing data
+Route::post('/listings', [ListingController::class, 'store']);
+
 // Show dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');

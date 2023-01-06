@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('job');
             $table->string('birthplace');
-            $table->date('birthday');
+            $table->string('birthday');
             $table->string('deathplace');
-            $table->date('deathdate');
+            $table->string('deathdate');
             $table->longText('description');
             $table->string('tags');
             $table->timestamps();
