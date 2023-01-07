@@ -44,7 +44,7 @@ class ListingController extends Controller
             'birthday' => 'nullable',
             'deathplace' => 'nullable',
             'deathdate' => 'nullable',
-            'description' => 'required',
+            'content' => 'required',
             'tags' => 'nullable',
         ]);
 

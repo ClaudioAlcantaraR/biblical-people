@@ -20,7 +20,7 @@
                 </div>
                 {{-- Content --}}
                 <div class="mt-8">
-                    <p class="text-gray-900 dark:text-gray-300 lg:text-lg text-base">{{ $listing->description }}</p>
+                    <p class="text-gray-900 dark:text-gray-300 lg:text-lg text-base">{{ $listing->content }}</p>
                 </div>
                 
 

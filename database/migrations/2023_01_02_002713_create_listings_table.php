@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('birthday')->nullable();;
             $table->string('deathplace')->nullable();;
             $table->string('deathdate')->nullable();;
-            $table->longText('description');
+            $table->longText('content');
             $table->string('tags')->nullable();
             $table->timestamps();
         });
