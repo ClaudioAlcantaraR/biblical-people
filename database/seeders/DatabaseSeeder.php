@@ -28,10 +28,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Jose',
             'job' => 'Agricultor', 
             'birthplace' => 'Juda',
-            'birthday' => '2007-12-31',
+            'birthday' => '2007',
             'deathplace' => 'Jerusalen',
-            'deathdate' => '2007-12-31',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
+            'deathdate' => '2007',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
             'tags' => 'profeta, creyente, sumosacerdote'
         ]);
 
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'birthday' => '2007-12-31',
             'deathplace' => 'Grecia',
             'deathdate' => '2007-12-31',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
             'tags' => 'profeta, creyente, sumosacerdote'
         ]);
 
@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
             'birthday' => '2007-12-31',
             'deathplace' => 'Grecia',
             'deathdate' => '2007-12-31',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
             'tags' => 'creyente, sumosacerdote'
         ]);
 
@@ -64,7 +64,7 @@ class DatabaseSeeder extends Seeder
             'birthday' => '2007-12-31',
             'deathplace' => 'Grecia',
             'deathdate' => '2007-12-31',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
             'tags' => 'profeta, creyente, sumosacerdote, mayordomo'
         ]);
         
@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
             'birthday' => '2007-12-31',
             'deathplace' => 'Grecia',
             'deathdate' => '2007-12-31',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
+            'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima et illo reprehenderit quas possimus voluptas repudiandae cum expedita, eveniet aliquid, quam illum quaerat consequatur! Expedita ab consectetur tenetur delensiti?',
             'tags' => 'sumosacerdote'
         ]);
     }
