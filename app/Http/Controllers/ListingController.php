@@ -15,7 +15,7 @@ class ListingController extends Controller
     public function index()
     {
         return view('listings.index', [
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(16)
         ]);
     }
 
@@ -50,7 +50,7 @@ class ListingController extends Controller
 
         Listing::create($formFields);
 
-        return redirect('/listings');
+        return redirect('/listings/create')->with('message', 'Biografía creada con éxito');
     }
 
     /**
