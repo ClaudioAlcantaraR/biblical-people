@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('job');
-            $table->string('birthplace');
-            $table->string('birthday');
-            $table->string('deathplace');
-            $table->string('deathdate');
+            $table->string('job')->nullable();;
+            $table->string('birthplace')->nullable();;
+            $table->string('birthday')->nullable();;
+            $table->string('deathplace')->nullable();;
+            $table->string('deathdate')->nullable();;
             $table->longText('description');
-            $table->string('tags');
+            $table->string('tags')->nullable();
             $table->timestamps();
         });
     }
