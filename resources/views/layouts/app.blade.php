@@ -7,6 +7,8 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <script src="//unpkg.com/alpinejs" defer></script>
+
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
@@ -30,6 +32,9 @@
             <main>
                 {{ $slot }}
             </main>
+            <footer>
+                <x-flash-message />
+            </footer>
         </div>
     </body>
 </html>
