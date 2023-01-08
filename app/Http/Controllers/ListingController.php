@@ -86,7 +86,20 @@ class ListingController extends Controller
      */
     public function update(Request $request, Listing $listing)
     {
-        //
+        $formFields = $request->validate([
+            'name' => 'required',
+            'job' => 'required',
+            'birthplace' => 'nullable',
+            'birthday' => 'nullable',
+            'deathplace' => 'nullable',
+            'deathdate' => 'nullable',
+            'content' => 'required',
+            'tags' => 'nullable',
+        ]);
+
+        $listing->update($formFields);
+
+        return back()->with('message', 'Biografía actualizada');
     }
 
     /**

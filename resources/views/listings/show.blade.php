@@ -1,8 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ $listing->name }}
-        </h2>
+        <div class="flex items-center justify-between">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ $listing->name }}
+            </h2>
+            <a href="/listings/{{$listing->id}}/edit">
+                <x-primary-button>Editar</x-primary-button>
+            </a>
+        </div>
     </x-slot>
 
     <div class="py-12">
@@ -16,7 +21,7 @@
                 </div>
                 {{-- Lectura TODO: Hard Code--}}
                 <div>
-                   <span class="text-gray-900 font-semibold text-gray-300 text-sm">15 min de lectura</span>
+                   <span class="text-gray-900 font-semibold text-sm">15 min de lectura</span>
                 </div>
                 {{-- Content --}}
                 <div class="mt-8">

@@ -20,6 +20,9 @@ Route::post('/listings', [ListingController::class, 'store']);
 // Show edit form
 Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('listings.edit');
 
+// Update listing
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
 // Show dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
