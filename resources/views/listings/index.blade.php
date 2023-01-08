@@ -18,13 +18,12 @@
                 @endforeach
             
                 @else
-                    <p>no listings found</p>
+                    <p>No se han encontrado biografías.</p>
                 @endunless
             </div>
             <div class="mt-6">
                 {{$listings->links()}}
             </div>
         </div>
-        
     </div>
 </x-app-layout>
