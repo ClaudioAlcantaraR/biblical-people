@@ -11,12 +11,16 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 px-3 flex justify-between">
+        <div class="max-w-screen-2xl mx-auto sm:px-6 lg:px-8 px-3 flex justify-between">
+            <aside class="hidden lg:block lg:w-70" aria-label="Sidebar">
+                <x-quick-bio :listing="$listing" />
+            </aside>
+            
             <div class="w-full max-w-3xl">
                 {{-- Nombre --}}
-                <h1
-                    class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
-                    {{ $listing->name }}</h1>
+                <h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+                    {{ $listing->name }}
+                </h1>
                 {{-- Tags --}}
                 <div>
                     <x-listing-tags :tagsCsv="$listing->tags" />
@@ -30,8 +34,8 @@
                     <p class="text-gray-900 dark:text-gray-300 lg:text-lg text-base">{{ $listing->content }}</p>
                 </div>
             </div>
-            <aside class="hidden lg:block lg:w-80" aria-label="Sidebar">
-                <x-quick-bio :listing="$listing" />
+            <aside class="hidden lg:block lg:w-70" aria-label="Sidebar">
+                <x-index-single />
             </aside>
         </div>
     </div>
