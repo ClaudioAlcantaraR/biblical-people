@@ -1,7 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex">
-            <x-back-button />
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight ml-6">
                 {{ __('Editar:') }} {{ $listing->name }}
             </h2>
