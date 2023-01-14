@@ -52,17 +52,19 @@
                     @csrf
                     @method('DELETE')
 
-                    <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                    <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+                    <h2 class="text-lg text-center font-medium text-gray-900 dark:text-gray-100">
                         {{ __('¿Estas seguro de borrar esta biografía?') }}
                     </h2>
 
-                    <div class="mt-6 flex justify-end">
+                    <div class="mt-6 flex justify-center">
                         <x-secondary-button x-on:click="$dispatch('close')">
-                            {{ __('Cancelar') }}
+                            {{ __('No, Cancelar') }}
                         </x-secondary-button>
         
                         <x-danger-button class="ml-3">
-                            {{ __('Borrar biografía') }}
+                            {{ __('Si, estoy seguro') }}
                         </x-danger-button>
                     </div>
                 </form>
