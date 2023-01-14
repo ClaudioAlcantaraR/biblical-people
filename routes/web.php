@@ -23,6 +23,9 @@ Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name
 // Update listing
 Route::put('/listings/{listing}', [ListingController::class, 'update']);
 
+// Delete listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+
 // Show dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
