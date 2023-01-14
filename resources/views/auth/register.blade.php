@@ -46,7 +46,7 @@
         </x-primary-button>
         <div class="text-sm font-medium text-gray-500 dark:text-gray-400 mt-6">
             ¿Ya tienes una cuenta?
-            <a class="ml-1 text-indigo-700 hover:underline dark:text-indigo-400" href="{{ route('login') }}">
+            <a class="ml-1 text-indigo-700 hover:underline dark:text-indigo-500" href="{{ route('login') }}">
                 {{ __('Iniciar sesión') }}
             </a>
         </div>
