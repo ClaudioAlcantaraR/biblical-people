@@ -48,9 +48,11 @@ class ListingController extends Controller
             'tags' => 'nullable',
         ]);
 
+        $formFields['user_id'] = auth()->id();
+
         Listing::create($formFields);
 
-        return redirect('/listings/create')->with('message', 'Biografía creada con éxito');
+        return redirect('/listings/manage')->with('message', 'Biografía creada con éxito');
     }
 
     /**
@@ -112,6 +114,16 @@ class ListingController extends Controller
     {
         $listing->delete();
 
-        return redirect('/listings');
+        return redirect('/listings/manage');
+    }
+
+    /**
+     * Manage the listings
+     * @param \App\Models\Listing  $listing
+     * @return \Illuminate\Http\Response
+     */
+    public function manage()
+    {
+        return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
     }
 }

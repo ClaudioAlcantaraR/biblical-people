@@ -22,8 +22,11 @@ Route::middleware('auth')->group(function () {
     Route::put('/listings/{listing}', [ListingController::class, 'update']);
     // Delete listing
     Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
-
+    // Manage listing
+    Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware('auth')->name('listings.manage');
 });
+
+
 
 // Show dashboard
 Route::get('/dashboard', function () {
