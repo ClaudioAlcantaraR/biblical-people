@@ -19,7 +19,7 @@
                 @endforeach
             
                 @else
-                    <p>No se han encontrado biografías.</p>
+                    <p class="mt-1 text-base text-gray-600 dark:text-gray-400">No se han encontrado biografías.</p>
                 @endunless
             </div>
             <div class="mt-6">

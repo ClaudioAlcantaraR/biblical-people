@@ -11,6 +11,7 @@ class Listing extends Model
 
     protected $fillable = [
         'name',
+        'user_id',
         'job',
         'birthplace',
         'birthday',
@@ -20,6 +21,9 @@ class Listing extends Model
         'tags'
     ];
 
+    /**
+     * Search and search by tag
+     */
     public function scopeFilter($query, array $filters)
     {   
         if($filters['tag'] ?? false) {
@@ -31,5 +35,13 @@ class Listing extends Model
                 ->orWhere('content', 'like', '%' . request('search') . '%' )
                 ->orWhere('tags', 'like', '%' . request('search') . '%');
         } 
+    }
+
+    /**
+     * Relationship to user
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
