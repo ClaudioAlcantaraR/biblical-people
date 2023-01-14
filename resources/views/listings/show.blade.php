@@ -1,12 +1,21 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex items-center justify-between">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ $listing->name }}
-            </h2>
-            <a href="/listings/{{$listing->id}}/edit" class="text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">
-                Editar
-            </a>
+            <div>
+                <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                    {{ $listing->name }}
+                </h2>
+            </div>
+            <div>
+                <a href="/listings/{{$listing->id}}/edit">
+                    <x-secondary-button>Editar</x-secondary-button>
+                </a>
+                <x-danger-button
+                    x-data=""
+                    x-on:click.prevent="$dispatch('open-modal', 'confirm-bio-deletion')">
+                    {{ __('Borrar biografía') }}
+                </x-danger-button>
+            </div>
         </div>
     </x-slot>
 
@@ -37,6 +46,27 @@
             <aside class="hidden lg:block lg:w-70" aria-label="Sidebar">
                 <x-index-single />
             </aside>
+
+            <x-modal name="confirm-bio-deletion" focusable>
+                <form method="POST" action="/listings/{{ $listing->id }}" class="p-6">
+                    @csrf
+                    @method('DELETE')
+
+                    <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                        {{ __('¿Estas seguro de borrar esta biografía?') }}
+                    </h2>
+
+                    <div class="mt-6 flex justify-end">
+                        <x-secondary-button x-on:click="$dispatch('close')">
+                            {{ __('Cancelar') }}
+                        </x-secondary-button>
+        
+                        <x-danger-button class="ml-3">
+                            {{ __('Borrar biografía') }}
+                        </x-danger-button>
+                    </div>
+                </form>
+            </x-modal>
         </div>
     </div>
 </x-app-layout>
