@@ -1,6 +1,6 @@
-<div {{ $attributes->merge(['class' => 'p-4 text-gray-500 border border-gray-400 rounded-lg dark:border-gray-700 dark:text-gray-400 sticky top-36'])}}>
+<div {{ $attributes->merge(['class' => 'p-4 text-gray-500 border border-gray-300 rounded-lg dark:border-gray-700 dark:text-gray-400 sticky top-36'])}}>
 {{-- TODO: Hacer este componente dinamico --}}
-    <div class="pb-3 border-b dark:border-gray-600 border-gray-400">
+    <div class="pb-3 border-b dark:border-gray-600 border-gray-300">
         <p class="font-bold text-gray-900 dark:text-gray-300">En esta biogragía</p>
     </div>
     <nav class="mt-4">

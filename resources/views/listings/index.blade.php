@@ -10,7 +10,8 @@
             <div class="mb-6">
                 @include('partials._search')
             </div>
-            <div class="grid grid-flow-row-dense sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-4 gap-4">
+            <div class="grid grid-flow-row-dense sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-4 gap-4 mt-3">
+          
                 @unless (count($listings) == 0)
             
                 @foreach ($listings as $listing)

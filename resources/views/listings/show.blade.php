@@ -7,7 +7,7 @@
                 </h2>
             </div>
             <div>
-                <a href="/listings/{{$listing->id}}/edit">
+                <a href="/listings/{{$listing->id}}/edit" class="mr-2">
                     <x-secondary-button>Editar</x-secondary-button>
                 </a>
                 <x-danger-button

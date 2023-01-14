@@ -8,23 +8,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Show all biographies. Definimos un name para usar la ruta
-Route::get('/listings', [ListingController::class, 'index'])->name('listings.index');
-
 // Show create biography
 Route::get('/listings/create', [ListingController::class, 'create'])->name('listings.create');
 
-// Store listing data
-Route::post('/listings', [ListingController::class, 'store']);
+Route::middleware('auth')->group(function () {
+    // Show all biographies.
+    Route::get('/listings', [ListingController::class, 'index'])->name('listings.index');
+    // Store listing data
+    Route::post('/listings', [ListingController::class, 'store']);
+    // Show edit form
+    Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('listings.edit');
+    // Update listing
+    Route::put('/listings/{listing}', [ListingController::class, 'update']);
+    // Delete listing
+    Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 
-// Show edit form
-Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('listings.edit');
-
-// Update listing
-Route::put('/listings/{listing}', [ListingController::class, 'update']);
-
-// Delete listing
-Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+});
 
 // Show dashboard
 Route::get('/dashboard', function () {
@@ -34,7 +33,7 @@ Route::get('/dashboard', function () {
 // Show Search Page
 Route::get('/search', function () {
     return view('search');
-})->middleware(['auth', 'verified'])->name('search');
+})->name('search');
 
 // Account
 Route::middleware('auth')->group(function () {
