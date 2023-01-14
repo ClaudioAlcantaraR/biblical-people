@@ -1,15 +1,23 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex">
+        <div class="flex justify-between">
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight ml-6">
-                {{ __('Editar:') }} {{ $listing->name }}
+                {{ __('Editando biografía:') }} {{ $listing->name }}
             </h2>
+            <div>
+                <a href="/listings/{{ $listing->id }}" target="_blank" class="flex items-center text-base text-gray-500 dark:text-gray-400 hover:underline hover:text-indigo-500">
+                    Ver biografía
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <form method="POST" action="/listings/{{$listing->id}}" class="md:max-w-4xl mx-auto" id="identifier">
+            <form method="POST" action="/listings/{{$listing->id}}" class="md:max-w-4xl mx-auto">
                 @csrf
                 @method('PUT')
                 <div class="grid md:grid-cols-2 md:gap-6">
@@ -63,7 +71,7 @@
                     placeholder=" " />{{$listing->content}}</textarea>
                     <label for="content" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-indigo-600 peer-focus:dark:text-indigo-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Descripción</label>
                 </div>
-                <button type="submit" class="text-white bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">Guardar</button>
+                <button type="submit" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Guardar</button>
             </form>
         </div>
 </x-app-layout>

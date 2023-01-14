@@ -44,6 +44,6 @@
         <x-primary-button class="mt-6">
             {{ __('Acceder') }}
         </x-primary-button>
-        <div class="text-sm font-medium text-gray-500 dark:text-gray-400 mt-6">¿No estas registrado?<a class="ml-1 text-indigo-700 hover:underline dark:text-indigo-400" href="/register/">Crear una cuenta</a></div>
+        <div class="text-sm font-medium text-gray-500 dark:text-gray-400 mt-6">¿No estas registrado?<a class="ml-1 text-indigo-700 hover:underline dark:text-indigo-500" href="/register/">Crear una cuenta</a></div>
     </form>
 </x-guest-layout>
