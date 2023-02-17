@@ -26,17 +26,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware('auth')->name('listings.manage');
 });
 
-
-
 // Show dashboard
-Route::get('/dashboard', function () {
+/* Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard'); */
 
 // Show Search Page
-Route::get('/search', function () {
+/* Route::get('/search', function () {
     return view('search');
-})->name('search');
+})->name('search'); */
 
 // Account
 Route::middleware('auth')->group(function () {
