@@ -27,9 +27,9 @@ Route::middleware('auth')->group(function () {
 });
 
 // Show dashboard
-Route::get('/dashboard', function () {
+/* Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard'); */
 
 // Show Search Page
 /* Route::get('/search', function () {

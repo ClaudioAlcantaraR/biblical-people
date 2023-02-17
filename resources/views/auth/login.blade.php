@@ -1,6 +1,5 @@
 <x-guest-layout>
     <h1 class="mb-3 text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">Iniciar sesión</h1>
-    <p class="mb-3 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet.</p>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
