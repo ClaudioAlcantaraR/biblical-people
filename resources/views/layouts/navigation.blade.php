@@ -26,11 +26,11 @@
                         {{ __('Crear Biografía') }}
                     </x-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('search')" :active="request()->routeIs('search')">
                         {{ __('Buscar') }}
                     </x-nav-link>
-                </div>
+                </div> --}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('listings.manage')" :active="request()->routeIs('listings.manage')">
                         {{ __('Manage') }}
@@ -101,11 +101,11 @@
                 {{ __('Crear Biografía') }}
             </x-responsive-nav-link>
         </div>
-        <div class="pt-2 pb-3 space-y-1">
+        {{-- <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('search')" :active="request()->routeIs('search')">
                 {{ __('Buscar') }}
             </x-responsive-nav-link>
-        </div>
+        </div> --}}
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('listings.manage')" :active="request()->routeIs('listings.manage')">
                 {{ __('Manage') }}
