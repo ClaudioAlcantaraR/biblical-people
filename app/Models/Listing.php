@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Tonysm\RichTextLaravel\Models\Traits\HasRichText;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Listing extends Model
 {
     use HasFactory;
+    use HasRichText;
 
     protected $fillable = [
         'name',
@@ -19,6 +21,10 @@ class Listing extends Model
         'deathdate',
         'content',
         'tags'
+    ];
+
+    protected $richTextFields = [
+        'content',
     ];
 
     /**
