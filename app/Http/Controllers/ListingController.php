@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ListingController extends Controller
 {
@@ -24,9 +25,9 @@ class ListingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Listing $listing)
     {
-        return view('listings.create');
+        return view('listings.create', ['listing' => $listing]);
     }
 
     /**
@@ -35,7 +36,7 @@ class ListingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Listing $listing)
     {
         $formFields = $request->validate([
             'name' => 'required',
@@ -49,10 +50,11 @@ class ListingController extends Controller
         ]);
 
         $formFields['user_id'] = auth()->id();
-
         Listing::create($formFields);
+        
+        $listingId = Listing::latest()->first()->id;
 
-        return redirect('/listings/manage')->with('message', 'Biografía creada con éxito');
+        return redirect('/listings/'.$listingId.'/edit')->with('message', 'Biografía creada con éxito');
     }
 
     /**

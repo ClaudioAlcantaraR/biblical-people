@@ -10,6 +10,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
+        "mews/purifier": "^3.4",
         "tonysm/rich-text-laravel": "^1.7"
     },
     "require-dev": {

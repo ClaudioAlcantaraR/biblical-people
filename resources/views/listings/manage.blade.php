@@ -33,7 +33,7 @@
                         @foreach($listings as $listing)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                <a href="/listings/{{$listing->id}}"> {{$listing->name}}</a>
+                                <a href="/listings/{{$listing->id}}" class="hover:underline">{{$listing->name}}</a>
                             </th>
                             <td class="px-6 py-4">
                                 <div>{{$listing->tags}}</div>
