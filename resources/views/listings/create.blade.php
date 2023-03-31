@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 px-3">
             <form method="POST" action="/listings" class="md:max-w-4xl mx-auto" id="identifier">
                 @csrf
                 <div class="grid md:grid-cols-2 md:gap-6">
