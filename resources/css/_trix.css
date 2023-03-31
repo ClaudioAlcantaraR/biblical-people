@@ -22,10 +22,11 @@
 /** These are TailwindCSS specific tweaks */
 .trix-content {
     @apply w-full;
+    min-height: 200px;
 }
 
 .trix-content h1 {
-    font-size: 1.25rem !important;
+    font-size: 1.50rem !important;
     line-height: 1.25rem !important;
     @apply leading-5 font-semibold mb-4;
 }
