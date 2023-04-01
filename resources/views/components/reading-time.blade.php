@@ -1,0 +1,1 @@
+<span {{ $attributes->merge(['id' => 'reading_time', 'class' => 'text-gray-900 font-semibold text-sm'])}}> min de lectura</span>

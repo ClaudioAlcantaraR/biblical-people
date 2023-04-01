@@ -6,21 +6,29 @@
             <dt class="mb-2 text-base font-bold text-gray-900 dark:text-gray-200">Profesión</dt>
             <dd class="inline-flex items-center text-sm text-gray-900 dark:text-gray-300 capitalize">{{ $listing->job }}</dd>
         </div>
+        @isset($listing->birthday)
         <div class="mb-4">
             <dt class="mb-2 text-base font-bold text-gray-900 dark:text-gray-200">Año de nacimiento</dt>
             <dd class="inline-flex items-center text-sm text-gray-900 dark:text-gray-300 capitalize">{{ $listing->birthday }}</dd>
         </div>
+        @endisset
+        @isset($listing->birthplace)
         <div class="mb-4">
             <dt class="mb-2 text-base font-bold text-gray-900 dark:text-gray-200">Lugar de nacimiento</dt>
             <dd class="inline-flex items-center text-sm text-gray-900 dark:text-gray-300 capitalize">{{ $listing->birthplace }}</dd>
         </div>
+        @endisset
+        @isset($listing->deathdate)
         <div class="mb-4">
             <dt class="mb-2 text-base font-bold text-gray-900 dark:text-gray-200">Año de muerte</dt>
             <dd class="inline-flex items-center text-sm text-gray-900 dark:text-gray-300 capitalize">{{ $listing->deathdate }}</dd>
         </div>
+        @endisset
+        @isset($listing->deathplace)
         <div class="mb-4">
             <dt class="mb-2 text-base font-bold text-gray-900 dark:text-gray-200">Lugar de muerte</dt>
             <dd class="inline-flex items-center text-sm text-gray-900 dark:text-gray-300 capitalize">{{ $listing->deathplace }}</dd>
         </div>
+        @endisset
     </dl>
 </div>

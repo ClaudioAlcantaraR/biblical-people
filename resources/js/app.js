@@ -1,4 +1,5 @@
 import './bootstrap';
+import './main';
 import './libs/trix';
 import './libs/datatable';
 

@@ -25,26 +25,25 @@
                 <x-quick-bio :listing="$listing" />
             </aside>
             
-            <div class="w-full max-w-3xl">
+            <div class="w-full max-w-4xl">
                 {{-- Nombre --}}
-                <h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+                <h1 class="mb-2 text-2xl sm:text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl dark:text-white">
                     {{ $listing->name }}
                 </h1>
                 {{-- Tags --}}
                 <div>
                     <x-listing-tags :tagsCsv="$listing->tags" />
                 </div>
-                {{-- Lectura TODO: Hard Code. Hacerte de esto un componente dinamico--}}
-                <div>
-                    <span class="text-gray-900 font-semibold text-sm">15 min de lectura</span>
-                </div>
+                {{-- <div>
+                    <x-reading-time />
+                </div> --}}
                 {{-- Content --}}
-                <div class="mt-8">
-                    <p class="text-gray-900 dark:text-gray-300 lg:text-lg text-base">{!! clean($listing->content) !!}</p>
+                <div class="mt-4">
+                    <article id="article_reading_time" class="text-gray-900 dark:text-gray-300 lg:text-lg text-base">{!! clean($listing->content) !!}</article>
                 </div>
             </div>
             <aside class="hidden lg:block lg:w-70" aria-label="Sidebar">
-                <x-index-single />
+               {{--  <x-index-single /> --}}
             </aside>
 
             <x-modal name="confirm-bio-deletion" focusable>
