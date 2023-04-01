@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex justify-between">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight ml-6">
+        <div class="flex justify-between flex-col sm:flex-row">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('Editando biografía:') }} {{ $listing->name }}
             </h2>
             <div>
@@ -16,7 +16,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 px-3">
             <form method="POST" action="/listings/{{$listing->id}}" class="md:max-w-4xl mx-auto">
                 @csrf
                 @method('PUT')

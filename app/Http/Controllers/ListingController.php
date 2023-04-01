@@ -91,14 +91,14 @@ class ListingController extends Controller
     public function update(Request $request, Listing $listing)
     {
         $formFields = $request->validate([
-            'name' => 'required',
-            'job' => 'required',
-            'birthplace' => 'nullable',
-            'birthday' => 'nullable',
-            'deathplace' => 'nullable',
-            'deathdate' => 'nullable',
+            'name' => 'required|max:255',
+            'job' => 'required|max:255',
+            'birthplace' => 'nullable|max:255',
+            'birthday' => 'nullable|max:255',
+            'deathplace' => 'nullable|max:255',
+            'deathdate' => 'nullable|max:255',
             'content' => 'required',
-            'tags' => 'nullable',
+            'tags' => 'nullable|max:255',
         ]);
 
         $listing->update($formFields);
