@@ -4,15 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Listing;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class ListingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('listings.index', [
@@ -51,7 +45,7 @@ class ListingController extends Controller
 
         $formFields['user_id'] = auth()->id();
         Listing::create($formFields);
-        
+
         $listingId = Listing::latest()->first()->id;
 
         return redirect('/listings/'.$listingId.'/edit')->with('message', 'Biografía creada con éxito');
