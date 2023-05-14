@@ -14,6 +14,10 @@
     max-width: 50%;
 }
 
+.trix-content div {
+    font-size: 1rem;
+}
+
 .trix-content rich-text-attachment .attachment {
     padding: 0 !important;
     max-width: 100% !important;
@@ -47,4 +51,16 @@
 
 .trix-content img {
     margin: 0 auto;
+}
+
+trix-toolbar .trix-button {
+    background: #ffffff !important;
+}
+
+.trix-content pre {
+    font-size: 1rem;
+    background-color: #05060B;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    color: #D1D5DB;
 }
