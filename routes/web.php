@@ -35,17 +35,12 @@ Route::middleware('auth')->group(function () {
         ]);
 
         $path = request()->file('attachment')->store('trix-attachments', 'public');
-        
+
         return [
             'image_url' => Storage::disk('public')->url($path),
         ];
     })->name('attachments.store');
 });
-
-// Show dashboard
-/* Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard'); */
 
 // Show Search Page
 /* Route::get('/search', function () {
