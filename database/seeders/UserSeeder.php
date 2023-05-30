@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
         $superAdmin->assignRole('super-admin');
         $superAdmin->save();
 
-        $admin = User::firstOrCreate([
+        $author = User::firstOrCreate([
             'id'                => 2,
             'name'              => 'Jane Doe',
             'avatar'            => null,
@@ -42,6 +42,6 @@ class UserSeeder extends Seeder
             'remember_token'    => null,
         ]);
 
-        $admin->assignRole('author');
+        $author->assignRole('author');
     }
 }
