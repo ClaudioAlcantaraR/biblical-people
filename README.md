@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Bilie People
+## About Biblie People
 
 It is a personal project which is still in development. In general it works as a minimalist blog where you can publish, edit and read biographies of biblical characters.
 
