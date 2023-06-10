@@ -1,19 +1,14 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 ## About Biblie People
 
 It is a personal project which is still in development. In general it works as a minimalist blog where you can publish, edit and read biographies of biblical characters.
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Requirements
+* Php 8.1 and above
+* Composer
+* Since this project is running laravel 9, we suggest checking out the official requirements <a href="https://laravel.com/docs/9.x/upgrade#updating-dependencies" taget="_blank">here</a>
+* Npm
 
 ## Installation
 
@@ -45,7 +40,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 `php artisan migrate`
 
-8. Seed database to download demo data
+8. Seed database to insert demo data
 
 `php artisan db:seed`
 
@@ -56,3 +51,15 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 10. Compile the assets
 
 `npm run dev`
+
+## Setup
+
+Log in to the application with the following credentials
+
+Email: super@admin.com
+Password: password
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+

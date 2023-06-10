@@ -41,7 +41,7 @@
                 <x-quick-bio :listing="$listing" />
             </aside>
 
-            <div class="w-full max-w-5xl">
+            <div class="w-full max-w-5xl lg:max-w-6xl">
                 {{-- Nombre --}}
                 <h1 class="mb-2 text-2xl sm:text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl dark:text-white">
                     {{ $listing->name }}
