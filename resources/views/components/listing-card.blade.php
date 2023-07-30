@@ -5,7 +5,7 @@
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white hover:underline">
             {{ $listing->name }}</h5>
     </a>
-    @isset($listinh->birthday)
+    @isset($listing->birthday)
         <p class="font-normal text-gray-700 dark:text-gray-400">Nacimiento: <span class="text-sm font-bold capitalize">{{ $listing->birthday }}</span></p>
     @endisset
 
